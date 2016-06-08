@@ -7,6 +7,8 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+Intermediate/
+Saved/
 
 # Windows Installer files
 *.cab
@@ -20,6 +22,9 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+
+#WINDOWS
+
 
 # OSX
 # =========================
@@ -45,3 +50,4 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
