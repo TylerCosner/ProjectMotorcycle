@@ -1,8 +1,8 @@
 {
-	"Changelist" : 3013449,
-	"BuildId" : "2acc023f-deba-45dc-8c42-518a236dbd24",
+	"Changelist" : 3028348,
+	"BuildId" : "35229d21-087c-4586-a260-2d76c8127ce5",
 	"Modules" : 
 	{
-		"ProjectMotorcycle" : "UE4Editor-ProjectMotorcycle-9447.dll"
+		"ProjectMotorcycle" : "UE4Editor-ProjectMotorcycle.dll"
 	}
 }

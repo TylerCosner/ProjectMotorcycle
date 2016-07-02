@@ -3,23 +3,9 @@
 #pragma once
 
 #include "Engine/DataAsset.h"
+#include "Blueprint/UserWidget.h"
+#include "LevelTransition.h"
 #include "LevelDataSet.generated.h"
-
-USTRUCT(BlueprintType)
-struct FLevelInfo
-{
-	GENERATED_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FText Title;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TAssetPtr<UWorld> Level;
-
-	FLevelInfo()
-	{
-	}
-};
 
 USTRUCT(BlueprintType)
 struct FLevelSet
@@ -28,6 +14,9 @@ struct FLevelSet
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText Title;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<UUserWidget> LevelSelectWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FLevelInfo> Levels;
