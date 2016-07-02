@@ -28,7 +28,7 @@ struct FLevelInfo
 	}
 };
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
+UCLASS(Blueprintable, BlueprintType, EditInlineNew, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class PROJECTMOTORCYCLE_API ULevelTransition : public UObject
 {
 	GENERATED_BODY()
@@ -36,5 +36,6 @@ public:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "LevelSystem")
 	void StartTransition(FLevelInfo from, FLevelInfo to);
 
-	DECLARE_DELEGATE(OnTransitionComplete)
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "LevelSystem")
+	void EndTransition();
 };

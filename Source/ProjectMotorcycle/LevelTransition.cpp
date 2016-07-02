@@ -6,3 +6,7 @@
 void ULevelTransition::StartTransition_Implementation(FLevelInfo from, FLevelInfo to)
 {
 }
+
+void ULevelTransition::EndTransition_Implementation()
+{
+}
