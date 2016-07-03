@@ -6,7 +6,7 @@ public class ProjectMotorcycle : ModuleRules
 {
 	public ProjectMotorcycle(TargetInfo Target)
 	{
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG", "LevelSequence" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });
 

@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "LevelSequence.h"
 #include "LevelTransition.generated.h"
 
 class ULevelTransition;
@@ -17,11 +18,11 @@ struct FLevelInfo
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TAssetPtr<UWorld> Level;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced)
-	ULevelTransition* preTransition;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TAssetPtr<ULevelSequence> preTransition;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced)
-	ULevelTransition* postTransition;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TAssetPtr<ULevelSequence> postTransition;
 
 	FLevelInfo()
 	{
