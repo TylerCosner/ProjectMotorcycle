@@ -4,8 +4,29 @@
 
 #include "Engine/DataAsset.h"
 #include "Blueprint/UserWidget.h"
-#include "LevelTransition.h"
 #include "LevelDataSet.generated.h"
+
+USTRUCT(BlueprintType)
+struct FLevelInfo
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Title;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TAssetPtr<UWorld> Level;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TAssetPtr<UWorld> preTransitionLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TAssetPtr<UWorld> postTransitionLevel;
+
+	FLevelInfo()
+	{
+	}
+};
 
 USTRUCT(BlueprintType)
 struct FLevelSet
@@ -35,11 +56,6 @@ class PROJECTMOTORCYCLE_API ULevelDataSet : public UDataAsset
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, Category = "LevelSystem")
-	FLevelInfo GetFirstLevel() {
-		return *LevelSets.GetData()->Levels.GetData();
-	};
-
 	UFUNCTION(BlueprintCallable, Category = "LevelSystem")
 	FName GetLevelName(FLevelInfo levelInfo) {
 		FString name = FPaths::GetBaseFilename(levelInfo.Level.GetLongPackageName());
